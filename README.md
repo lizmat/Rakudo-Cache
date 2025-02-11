@@ -106,7 +106,7 @@ HELPER METHODS
 
 All helper method names start with "rakudo-" and return the `IO::Path` of the associated list of files.
 
-method | description -------------|------------ rakudo-c | all C programming language related files rakudo-doc | all documentation files rakudo-java | all Java programming language related files rakudo-js | all Javascript programming language related files rakudo-nqp | all NQP related files rakudo-perl | all Perl programming language related files rakudo-raku | all Raku Programming Language related files rakudo-shell | all shell scripts / batch files rakudo-test | all testing reated files rakudo-yaml | all files containing YAML of some sort rakudo-all |- all of the above
+method | description -------------|------------ rakudo-c | all C programming language related files rakudo-doc | all documentation files rakudo-java | all Java programming language related files rakudo-js | all Javascript programming language related files rakudo-nqp | all NQP related files rakudo-perl | all Perl programming language related files rakudo-raku | all Raku Programming Language related files rakudo-shell | all shell scripts / batch files rakudo-test | all testing related files rakudo-yaml | all files containing YAML of some sort rakudo-all | all of the above
 
 SCRIPTS
 =======

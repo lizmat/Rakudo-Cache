@@ -118,9 +118,9 @@ rakudo-nqp   | all NQP related files
 rakudo-perl  | all Perl programming language related files
 rakudo-raku  | all Raku Programming Language related files
 rakudo-shell | all shell scripts / batch files
-rakudo-test  | all testing reated files
+rakudo-test  | all testing related files
 rakudo-yaml  | all files containing YAML of some sort
-rakudo-all   |- all of the above
+rakudo-all   | all of the above
 
 =head1 SCRIPTS
 
