@@ -106,7 +106,14 @@ HELPER METHODS
 
 All helper method names start with "rakudo-" and return the `IO::Path` of the associated list of files.
 
-method | description -------------|------------ rakudo-c | all C programming language related files rakudo-doc | all documentation files rakudo-java | all Java programming language related files rakudo-js | all Javascript programming language related files rakudo-nqp | all NQP related files rakudo-perl | all Perl programming language related files rakudo-raku | all Raku Programming Language related files rakudo-shell | all shell scripts / batch files rakudo-test | all testing related files rakudo-yaml | all files containing YAML of some sort rakudo-all | all of the above
+<table class="pod-table">
+<thead><tr>
+<th>method</th> <th>description</th>
+</tr></thead>
+<tbody>
+<tr> <td>rakudo-c</td> <td>all C programming language related files</td> </tr> <tr> <td>rakudo-doc</td> <td>all documentation files</td> </tr> <tr> <td>rakudo-java</td> <td>all Java programming language related files</td> </tr> <tr> <td>rakudo-js</td> <td>all Javascript programming language related files</td> </tr> <tr> <td>rakudo-nqp</td> <td>all NQP related files</td> </tr> <tr> <td>rakudo-perl</td> <td>all Perl programming language related files</td> </tr> <tr> <td>rakudo-raku</td> <td>all Raku Programming Language related files</td> </tr> <tr> <td>rakudo-shell</td> <td>all shell scripts / batch files</td> </tr> <tr> <td>rakudo-test</td> <td>all testing related files</td> </tr> <tr> <td>rakudo-yaml</td> <td>all files containing YAML of some sort</td> </tr> <tr> <td>rakudo-all</td> <td>all of the above</td> </tr>
+</tbody>
+</table>
 
 SCRIPTS
 =======

@@ -108,6 +108,7 @@ that could not be categorized using current semantics.
 All helper method names start with "rakudo-" and return the C<IO::Path>
 of the associated list of files.
 
+=table
 method       | description
 -------------|------------
 rakudo-c     | all C programming language related files
