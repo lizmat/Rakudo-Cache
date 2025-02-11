@@ -1,0 +1,12 @@
+use Rakudo::Cache;
+
+my $rc = Rakudo::Cache.new;
+
+my @huh := $rc.update;
+
+if @huh {
+    say "Found @huh.elems() files that couldn't be categorized:";
+    .say for @huh;
+}
+
+# vim: expandtab shiftwidth=4

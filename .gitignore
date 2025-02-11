@@ -1,0 +1,4 @@
+.precomp/
+/Rakudo-Cache-*
+/releases/
+*.rakucov

@@ -1,0 +1,30 @@
+{
+  "auth": "zef:lizmat",
+  "authors": [
+    "Elizabeth Mattijsen"
+  ],
+  "build-depends": [
+  ],
+  "depends": [
+    "Git::Files:ver<0.0.9+>:auth<zef:lizmat>",
+    "path-utils:ver<0.0.21+>:auth<zef:lizmat>"
+  ],
+  "description": "Maintain a local cache of Rakudo source",
+  "license": "Artistic-2.0",
+  "name": "Rakudo::Cache",
+  "perl": "6.d",
+  "provides": {
+    "Rakudo::Cache": "lib/Rakudo/Cache.rakumod"
+  },
+  "resources": [
+  ],
+  "source-url": "https://github.com/lizmat/Rakudo-Cache.git",
+  "tags": [
+    "RAKUDO",
+    "CACHE",
+    "SEARCH"
+  ],
+  "test-depends": [
+  ],
+  "version": "0.0.1"
+}

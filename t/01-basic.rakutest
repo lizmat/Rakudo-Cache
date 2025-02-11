@@ -1,0 +1,35 @@
+use Test;
+
+use Rakudo::Cache;
+
+my @types = <
+  rakudo-c rakudo-doc rakudo-java rakudo-js rakudo-nqp rakudo-perl
+  rakudo-raku rakudo-shell rakudo-test rakudo-yaml
+>;
+
+plan 7 + @types * 3;
+
+my $rc := Rakudo::Cache.new(:cache($*PROGRAM.sibling("cache")));
+isa-ok $rc, Rakudo::Cache;
+
+my @huh := $rc.update;
+ok @huh > 0, 'Some files should not be categorized';
+
+my int $lines;
+for @types {
+    my $io := $rc."$_"();
+    isa-ok $io, IO::Path;
+    ok $io.e, "does $_ exist?";
+    $lines += $io.lines.elems;
+    ok $io.unlink, "could we remove $_?";
+}
+
+my $io := $rc.rakudo-all;
+isa-ok $io, IO::Path;
+ok $io.e, "does rakudu-all exist?";
+is $io.lines.elems, $lines, "does all contain all files?";
+ok $io.unlink, "could we remove rakudo-all?";
+
+ok $rc.cache.rmdir, 'could we remove the cache again?';
+
+# vim: expandtab shiftwidth=4
