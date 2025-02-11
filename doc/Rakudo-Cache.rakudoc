@@ -128,8 +128,8 @@ rakudo-all   | all of the above
 =begin output
 $ update-rakudo-cache
 Found 145 files that couldn't be categorized:
-/Users/liz/Github/rakudo/.gitattributes
-/Users/liz/Github/rakudo/.gitignore
+.../rakudo/.gitattributes
+.../rakudo/.gitignore
 ...
 =end output
 

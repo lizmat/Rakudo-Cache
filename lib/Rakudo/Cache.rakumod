@@ -5,7 +5,7 @@ use path-utils:ver<0.0.21+>:auth<zef:lizmat> <path-is-text>;
 my $default-cache := (%*ENV<RAKU_RAKUDO_CACHE> andthen .IO)
   // ($*HOME // $*TMPDIR).add(".raku").add("cache");
 
-class Rakudo::Cache:ver<0.0.1>:auth<zef:lizmat> {
+class Rakudo::Cache:ver<0.0.2>:auth<zef:lizmat> {
     has IO::Path $.cache is built(:bind) = $default-cache;
 
     method rakudo-all(Rakudo::Cache:D:)   { $!cache.add("rakudo-all")   }

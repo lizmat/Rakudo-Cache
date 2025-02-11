@@ -120,8 +120,8 @@ SCRIPTS
 
     $ update-rakudo-cache
     Found 145 files that couldn't be categorized:
-    /Users/liz/Github/rakudo/.gitattributes
-    /Users/liz/Github/rakudo/.gitignore
+    .../rakudo/.gitattributes
+    .../rakudo/.gitignore
     ...
 
 The `update-rakudo-cache` script looks at the source files of the executable, updates the paths in the cache and shows the paths of the files that couldn't be interpreted.

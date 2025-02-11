@@ -2,5 +2,8 @@ Revision history for Rakudo::Cache
 
 {{$NEXT}}
 
+0.0.2  2025-02-11T21:50:12+01:00
+    - Fix some annoying pod rendering issues
+
 0.0.1  2025-02-11T20:55:50+01:00
     - Initial version
