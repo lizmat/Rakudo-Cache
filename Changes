@@ -2,6 +2,10 @@ Revision history for Rakudo::Cache
 
 {{$NEXT}}
 
+0.0.3  2025-02-12T18:50:53+01:00
+    - Fix sort order, making sure that first all Rakudo
+      files are seen, then NQP, and then MoarVM
+
 0.0.2  2025-02-11T21:50:12+01:00
     - Fix some annoying pod rendering issues
 

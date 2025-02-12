@@ -5,7 +5,7 @@ use path-utils:ver<0.0.21+>:auth<zef:lizmat> <path-is-text>;
 my $default-cache := (%*ENV<RAKU_RAKUDO_CACHE> andthen .IO)
   // ($*HOME // $*TMPDIR).add(".raku").add("cache");
 
-class Rakudo::Cache:ver<0.0.2>:auth<zef:lizmat> {
+class Rakudo::Cache:ver<0.0.3>:auth<zef:lizmat> {
     has IO::Path $.cache is built(:bind) = $default-cache;
 
     method rakudo-all(Rakudo::Cache:D:)   { $!cache.add("rakudo-all")   }
@@ -68,12 +68,17 @@ class Rakudo::Cache:ver<0.0.2>:auth<zef:lizmat> {
         extract($rakudo.add("nqp"));
         extract($rakudo.add("nqp").add("MoarVM"));
 
+        my sub sorter($_) {
+            .subst('/nqp/MoarVM/', '/z/').subst('/nqp/', '/y/')
+        }
+
         $!cache.mkdir;
         for <c doc java js nqp perl raku shell test yaml> {
-            @all.append(::("@$_"));
-            self."rakudo-$_"().spurt(::("@$_").sort.join("\n"));
+            my @paths := ::("@$_");
+            @all.append(@paths);
+            self."rakudo-$_"().spurt(@paths.sort(&sorter).join("\n"));
         }
-        self.rakudo-all.spurt(@all.sort.join("\n"));
+        self.rakudo-all.spurt(@all.sort(&sorter).join("\n"));
 
         @huh
     }
