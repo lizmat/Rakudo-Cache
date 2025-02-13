@@ -2,6 +2,11 @@ Revision history for Rakudo::Cache
 
 {{$NEXT}}
 
+0.0.4  2025-02-13T12:11:18+01:00
+    - Also add roast to scan: although technically not Rakudo
+      in practice many people consider it Rakudo as it is a
+      submodule of Rakudo in installations
+
 0.0.3  2025-02-12T18:50:53+01:00
     - Fix sort order, making sure that first all Rakudo
       files are seen, then NQP, and then MoarVM

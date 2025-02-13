@@ -5,7 +5,7 @@ use path-utils:ver<0.0.21+>:auth<zef:lizmat> <path-is-text>;
 my $default-cache := (%*ENV<RAKU_RAKUDO_CACHE> andthen .IO)
   // ($*HOME // $*TMPDIR).add(".raku").add("cache");
 
-class Rakudo::Cache:ver<0.0.3>:auth<zef:lizmat> {
+class Rakudo::Cache:ver<0.0.4>:auth<zef:lizmat> {
     has IO::Path $.cache is built(:bind) = $default-cache;
 
     method rakudo-all(Rakudo::Cache:D:)   { $!cache.add("rakudo-all")   }
@@ -67,9 +67,12 @@ class Rakudo::Cache:ver<0.0.3>:auth<zef:lizmat> {
         extract($rakudo);
         extract($rakudo.add("nqp"));
         extract($rakudo.add("nqp").add("MoarVM"));
+        extract($rakudo.add("t").add("spec"));
 
         my sub sorter($_) {
-            .subst('/nqp/MoarVM/', '/z/').subst('/nqp/', '/y/')
+            .subst('/nqp/MoarVM/', '/z/')
+            .subst('/nqp/', '/y/')
+            .subst('/t/spec/', '/x/')
         }
 
         $!cache.mkdir;
@@ -80,7 +83,7 @@ class Rakudo::Cache:ver<0.0.3>:auth<zef:lizmat> {
         }
         self.rakudo-all.spurt(@all.sort(&sorter).join("\n"));
 
-        @huh
+        @huh.sort(&sorter)
     }
 }
 

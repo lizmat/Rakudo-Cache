@@ -22,7 +22,7 @@ The `Rakudo::Cache` distribution provides the logic to create lists of files acc
 
 It also provides a `update-rakudo-cache` script for easy updating, which should usually only be after a Rakudo update.
 
-It looks at the files in the "rakudo", "nqp" and "MoarVM" repositories as installed inside the root of a Rakudo distribution. It performs the following heuristics on the files in these repositories:
+It looks at the files in the "rakudo", "nqp","MoarVM" and "roast" repositories as installed inside the root of a Rakudo distribution. It performs the following heuristics on the files in these repositories:
 
 nqp
 ---
@@ -119,7 +119,7 @@ SCRIPTS
 =======
 
     $ update-rakudo-cache
-    Found 145 files that couldn't be categorized:
+    Found 170 files that couldn't be categorized:
     .../rakudo/.gitattributes
     .../rakudo/.gitignore
     ...

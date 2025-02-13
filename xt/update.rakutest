@@ -12,7 +12,7 @@ plan 7 + @types * 3;
 my $rc := Rakudo::Cache.new(:cache($*PROGRAM.sibling("cache")));
 isa-ok $rc, Rakudo::Cache;
 
-my @huh := $rc.update;
+my @huh = $rc.update;
 ok @huh > 0, 'Some files should not be categorized';
 
 my int $lines;
